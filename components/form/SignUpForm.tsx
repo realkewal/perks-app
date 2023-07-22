@@ -4,6 +4,7 @@ import * as Yup from "yup";
 
 import { Formik } from "formik";
 import SignUpFormFields from "./SignUpFormFields";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface Values {
@@ -32,6 +33,8 @@ const initialValues: Values = {
 };
 
 export default function SignUpForm() {
+  const router = useRouter();
+  const [msg, setMsg] = useState<string | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleSubmit = async (values: Values) => {
@@ -49,6 +52,8 @@ export default function SignUpForm() {
         throw new Error("Registration failed");
       }
       // Registration successful, perform any necessary actions
+      setMsg("Signed up successfully, redirecting...");
+      router.push("/");
     } catch (error) {
       console.error(error);
       setSubmitError("Oops! Something went wrong. Please try again later.");
@@ -65,6 +70,7 @@ export default function SignUpForm() {
         <SignUpFormFields />
       </Formik>
       {submitError && <div className="text-red-600 mt-2">{submitError}</div>}
+      {msg && <div className="text-green-600 mt-2">{msg}</div>}
     </>
   );
 }
