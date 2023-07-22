@@ -1,4 +1,4 @@
-import { Field, Form } from "formik";
+import { ErrorMessage, Field, Form } from "formik";
 
 export default function SignUpFormFields() {
   return (
@@ -12,6 +12,11 @@ export default function SignUpFormFields() {
           type="name"
           className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
+        <ErrorMessage
+          className="text-red-600 text-sm mt-2"
+          name="name"
+          component="div"
+        />
       </div>
       <div>
         <label htmlFor="email">Email</label>
@@ -21,6 +26,11 @@ export default function SignUpFormFields() {
           placeholder="bruce@darkknight.com"
           type="email"
           className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+        <ErrorMessage
+          className="text-red-600 text-sm mt-2"
+          name="email"
+          component="div"
         />
       </div>
 
@@ -34,16 +44,26 @@ export default function SignUpFormFields() {
           autoComplete="current-password"
           className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
+        <ErrorMessage
+          className="text-red-600 text-sm mt-2"
+          name="password"
+          component="div"
+        />
       </div>
 
       <div>
         <label htmlFor="password">Referral code</label>
         <Field
-          id="referralCode"
-          name="referralCode"
+          id="referredBy"
+          name="referredBy"
           placeholder="promo-xxxxxx"
           type="text"
           className="block px-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+        <ErrorMessage
+          className="text-red-600 text-sm mt-2"
+          name="referredBy"
+          component="div"
         />
       </div>
 
