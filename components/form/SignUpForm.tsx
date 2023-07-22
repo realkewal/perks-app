@@ -2,8 +2,7 @@
 
 import * as Yup from "yup";
 
-import { Formik, FormikHelpers } from "formik";
-
+import { Formik } from "formik";
 import SignUpFormFields from "./SignUpFormFields";
 import { useState } from "react";
 
@@ -37,7 +36,7 @@ export default function SignUpForm() {
 
   const handleSubmit = async (values: Values) => {
     try {
-      const response = await fetch("/api/signups", {
+      const response = await fetch("/api/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
