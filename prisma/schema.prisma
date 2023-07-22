@@ -16,8 +16,8 @@ model User {
   name                  String?
   password              String
   createdAt             DateTime @default(now())
-  referralCode          String   @unique
-  referredBy            String?  @map("referring_user_id")
+  referralCode          String?  @unique
+  referredBy            String?
   successfulConversions Int      @default(0)
   credits               Int      @default(0)
 }
