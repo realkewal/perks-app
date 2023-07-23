@@ -12,7 +12,10 @@ export default function HeroSection() {
           <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">
             Sign up and start earning rewards, today!
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-white">
+          <p
+            id="leading"
+            className="mt-6 text-lg leading-8 text-gray-600 dark:text-white"
+          >
             Are you ready to embark on an exciting journey of rewards and
             referrals? Sign up now to unlock a world of possibilities! With our
             Referral Program, every step you take brings you closer to
