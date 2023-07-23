@@ -1,27 +1,35 @@
-"use client";
+import SignOutLink from "./SignOutLink";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth/next";
 
-import { signIn, signOut, useSession } from "next-auth/react";
+export default async function NavLoginLink() {
+  // const { data: session } = useSession();
 
-export default function NavLoginLink() {
-  const { data: session } = useSession();
+  const session = await getServerSession();
   return (
     <>
       {session ? (
-        <p>
-          Welcome {session!.user!.name}!{" "}
-          <span
-            style={{ textDecoration: "underline", cursor: "pointer" }}
-            onClick={() => signOut()}
+        <>
+          <p className="cursor-pointer ">Welcome {session!.user!.name}! </p>
+          &nbsp;
+          <a
+            href="/dashboard"
+            className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
           >
-            Sign out
-          </span>
-        </p>
+            Go to Dashboard <span aria-hidden="true">&rarr;</span>
+          </a>
+          &nbsp;
+          <SignOutLink />
+        </>
       ) : (
         <a
           href="/signin"
           className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
         >
-          Log in <span aria-hidden="true">&rarr;</span>
+          <p>
+            {" "}
+            Log in <span aria-hidden="true">&rarr;</span>
+          </p>
         </a>
       )}
     </>
