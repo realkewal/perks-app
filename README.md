@@ -17,8 +17,7 @@ This is a referral program application built using Next.js. I've used Next Auth 
 2. Update the MONGODB_URI .env file with the connection string of your database. Make sure the URL contains the name of your database at the end of the string or manually add the database name at the end of the connection string.
 3. Run the following command in the project's root directory to setup the necessary schema.
 
-bash ``````
-
+`````` 
 npx prisma db push
 
 ``````
