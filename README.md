@@ -32,6 +32,17 @@ Once the database is setup, you can now run the project locally by following the
 4. Run "npm run dev" in the root directory to start the development server.
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Usage instructions
+
+1. Navigate to the registration form using the "Sign up" button on the home page.
+2. Enter your name, email address, password and referral code(if you have it).
+3. Once you have signed up, you will be redirected to the home page. (It does not support automatic sign in at the moment.)
+4. Log in to the application by using the same email address and password used during the sign up step.
+5. Once you logged in, now you can navigate to the "Dashboard" using the "Go to Dashboard" link on the top right corner or using the "Go to Dashboard" CTA on the homepage.
+6. You can now invite your friends to sign up to the application using the unique referral code visible on the dashboard page.
+7. You can also share your unique referral code using SMS by using the "Share code using SMS" button visible on the dashboard.
+8. Once your friends start signing up, you'll see the referrals as a list on the Dashboard page.
+
 ## Design
 
 This application uses Tailwind CSS for styling React components and all pages.
