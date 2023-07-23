@@ -51,11 +51,14 @@ export default async function Dashboard() {
                 Your uniqe referral code is{" "}
                 <p className="text-green-600">{userDetails?.referralCode}</p>{" "}
               </div>
-              <ShareYourCode referralCode={userDetails?.referralCode!} />
+
+              <div className="py-4 bg-indigo-700 text-white rounded-md my-4 w-64">
+                <ShareYourCode referralCode={userDetails?.referralCode!} />
+              </div>
             </div>
           </header>
           <main>
-            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 text-gray-900 px-4">
+            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 text-gray-900 px-4 text-left">
               <h4 className="text-2xl">Your referrals</h4>
               <ReferralList referrals={referrals} />
             </div>

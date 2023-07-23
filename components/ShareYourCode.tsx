@@ -3,11 +3,10 @@ type ReferralCode = {
 };
 
 const ShareYourCode: React.FC<ReferralCode> = ({ referralCode }) => {
+  const smsText = `sms:?&body=Hey! Checkout this new Perks app to earn credits! Sign up using my referral code ${referralCode}`;
   return (
-    <a
-      href={`sms:?&amp;body=Hey! Checkout this new Perks app to earn credits! Sign up using my referral code ${referralCode}`}
-    >
-      Click here to share your referral code using SMS
+    <a className="block text-center" href={smsText}>
+      Share code using SMS &uarr;
     </a>
   );
 };
