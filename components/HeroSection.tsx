@@ -1,6 +1,7 @@
 import HeroScreenShot from "./HeroScreenShot";
 import Pattern from "./Pattern";
 import PrimaryButton from "./PrimaryButton";
+import PrimaryCTA from "./PrimaryCTA";
 
 export default function HeroSection() {
   return (
@@ -18,9 +19,7 @@ export default function HeroSection() {
             incredible rewards.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a href="/signup" className="">
-              <PrimaryButton buttonText="Get Started" />
-            </a>
+            <PrimaryCTA />
           </div>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
